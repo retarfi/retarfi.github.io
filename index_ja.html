@@ -13,240 +13,276 @@
     <title>鈴木雅弘</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min_flatly.css" />
+    <script>
+      var shiftWindow = function() { scrollBy(0, -50) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
   </head>
-  <body>
+
+  <body style="padding-top: 70px" onload="load()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">鈴木 雅弘</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bar_toggle" aria-controls="bar_toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bar_toggle">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#self-introduction">自己紹介</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#biography">略歴</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resources">公開資源</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#papers">論文</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#awards">受賞</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#others">その他</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link"  href="index.html">English</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
-    <div class="row pt-3 border-bottom">
-      <div class="col-10">
-        <h2>鈴木 雅弘</h2>
-      </div>
-      <div class="col-2">
-        <p class="text-right"><a href="index.html">English</a></p>
-      </div>
-    </div>
-        
-    <div class="row py-3 mjustify-content-around border-bottom">
-      <div class="col-4 col-lg-3 col-xl-3">
-        <img class="media-object rounded img-fluid" src="img/msuzuki.jpg" alt="...">
-      </div>
-      <div class="col-8 col-lg-7 col-xl-6">
-        <div class="card">
-          <div class="card-body">
-            <h4>Masahiro Suzuki</h4>
-            東京大学大学院工学系研究科 システム創成学専攻 和泉研究室所属<br>
-            Mail : msuzuki [at] g.ecc.u-tokyo.ac.jp<br>
-            <img style="vertical-align:middle; width:16px; height:14px;" src="img/linkedin.png"/> : <a href="https://www.linkedin.com/in/msuzuki7/" target="_blank" rel="noopener noreferrer" style="vertical-align:top;">linkedin.com/in/msuzuki7/</a><br>
-            <img style="vertical-align: middle; width:14px; height:14px;" src="img/orcid_128x128.png"/> : <a href="https://orcid.org/0000-0001-8519-5617" target="_blank">0000-0001-8519-5617</a><br>
-            <img style="vertical-align: middle; width:14px; height:14px;" src="img/GitHub-Mark-32px.png"/> : <a href="https://github.com/retarfi" target="_blank">github.com/retarfi</a>
+      <!-- <div class="row pt-3 border-bottom">
+        <div class="col-10">
+          <h2>鈴木 雅弘</h2>
+        </div>
+        <div class="col-2">
+          <p class="text-right"><a href="index.html">English</a></p>
+        </div>
+      </div> -->
+          
+      <div class="row py-3 mjustify-content-around border-bottom">
+        <div class="col-4 col-lg-3 col-xl-3">
+          <img class="media-object rounded img-fluid" src="img/msuzuki.jpg" alt="...">
+        </div>
+        <div class="col-8 col-lg-7 col-xl-6">
+          <div class="card">
+            <div class="card-body">
+              <h4>Masahiro Suzuki</h4>
+              東京大学大学院工学系研究科 システム創成学専攻 和泉研究室所属<br>
+              Mail : msuzuki [at] g.ecc.u-tokyo.ac.jp<br>
+              <img style="vertical-align: middle; width:14px; height:14px;" src="img/researchgate.png"/> : <a href="https://www.researchgate.net/profile/Masahiro-Suzuki-11" target="_blank">Masahiro-Suzuki-11</a><br>
+              <img style="vertical-align: middle; width:14px; height:14px;" src="img/orcid_128x128.png"/> : <a href="https://orcid.org/0000-0001-8519-5617" target="_blank">0000-0001-8519-5617</a><br>
+              <img style="vertical-align: middle; width:14px; height:14px;" src="img/GitHub-Mark-32px.png"/> : <a href="https://github.com/retarfi" target="_blank">github.com/retarfi</a><br>
+              <img style="vertical-align:middle; width:16px; height:14px;" src="img/linkedin.png"/> : <a href="https://www.linkedin.com/in/msuzuki7/" target="_blank" rel="noopener noreferrer" style="vertical-align:top;">linkedin.com/in/msuzuki7/</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      
+
+      <div class="row pt-5 border-bottom" id="self-introduction">
+        <div class="col-12">
+          <h3>自己紹介</h3>
+        </div>
+      </div>
+
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+            <p>研究分野：テキストマイニング，自然言語処理</p>
+            <p>よく使うプログラミング言語 : Python</p>
+            <p>言語処理学会学生会員・人工知能学会学生会員</p>
+        </div>
+      </div>
+      
+      <div class="row pt-5 border-bottom" id="biography">
+        <div class="col-12">
+          <h3>略歴</h3>
+        </div>
+      </div>
+
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <p>2020/04 - : &nbsp; 東京大学工学系研究科 システム創成学専攻 和泉研究室</p>
+          <p>2019/05 - 2020/03 : &nbsp; 東京大学工学部 システム創成学科 和泉研究室</p>
+          <p>2018/04 - 2020/03 : &nbsp; 東京大学工学部 システム創成学科 システムデザイン&マネジメント(SDM)コース</p>
+          <p>2016/04 - 2020/03 : &nbsp; 東京大学運動会ゴルフ部</p>
+          <p>2016/04 - 2018/03 : &nbsp; 東京大学 教養学部 前期課程理科二類</p>
+          <p>2015/04 - 2016/03 : &nbsp; 慶應義塾大学 理工学部 管理工学科</p>
+          <p>2009/04 - 2015/03 : &nbsp; 筑波大学附属駒場中・高等学校</p>
+          <p>1996/09 :  &nbsp; 東京生まれ</p>
+        </div>
+      </div>
+
+      <div class="row pt-5 border-bottom" id="resources">
+        <div class="col-12">
+          <h3>公開リソース</h3>
+        </div>
+      </div>
+
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <ul>
+            <li>
+              BERT・ELECTRAの日本語事前学習プログラム (<a href="https://github.com/retarfi/language-pretraining", target=_blank>github.com/retarfi/language-pretraining</a>)<br>
+              日本語Wikipediaや金融ドメインをコーパスに用いて訓練した、BERTやELECTRAの事前学習モデル。それぞれWikipediaモデルと金融モデルが自然言語処理ライブラリのTransformersにて利用可能 (<a href="https://huggingface.co/izumi-lab", target=_blank>huggingface.co/izumi-lab</a>)。
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row pt-5 border-bottom" id="papers">
+        <div class="col-12">
+          <h3>論文</h3>
+        </div>
+      </div>
+      
+      <div class="row px-1 pt-4 border-bottom">
+        <div class="col-12">
+          <h4>審査付学術雑誌論文</h4>
+        </div>
+      </div>
+
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <ul>
+            <li>
+              <strong>Masahiro Suzuki</strong>, Hiroki Sakaji, Kiyoshi, Izumi, Hiroyasu Matsushima, Yasushi Ishikawa, <br>
+              "Forecasting Net Income Estimate and Stock Price Using Text Mining from Economic Reports", <br>
+              <i>Information</i> (ISSN 2078-2489), MDPI, <strong>2020</strong>, 11, 292, 2020.<br>
+              <a href="https://doi.org/10.3390/info11060292" target=_blank>doi.org/10.3390/info1160292</a><br>
+              (Cover Storyに選出)
+            </li>
+          </ul>
+        </div>
+      </div>
     
+      <div class="row px-1 pt-5 border-bottom">
+        <div class="col-12">
+          <h4>審査付国際会議</h4>
+        </div>
+      </div>
 
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>自己紹介</h3>
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <ul>
+            <li>
+              Rei Taguchi, Hikaru Watanabe, Masanori Hirano, <strong>Masahiro Suzuki</strong>, Hiroki Sakaji, Kiyoshi Izumi, and Kenji Hiramatsu, <br>
+              "Market Trend Analysis Using Polarity Index Generated from Analyst Reports," <br>
+              The 4th International Workshop on Cross-disciplinary Data Exchange and Collaboration (CDEC) <br>
+              in IEEE BigData 2021, Online, December, 2021.
+            </li>
+            <li>
+              <strong>Masahiro Suzuki</strong>, Toshiya Katagi, Hiroki Sakaji, Kiyoshi Izumi, Yasushi Ishikawa, <br>
+              "Stock Price Analysis Using Combination of Analyst Reports and Several Documents," <br>
+              The 2nd International Workshop on Cross-disciplinary Data Exchange and Collaboration (CDEC) <br>
+              in 19th IEEE International Conference on Data Mining Workshops (ICDMW2019), pp.30-36, Beijing, China, November, 2019.<br>
+              (Best Paper Award, 47.4% Acceptance Rate) <br>
+              <a href='https://ieeexplore.ieee.org/document/8955526'>ieeexplore.ieee.org/document/8955526</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-          <p>研究分野：テキストマイニング，自然言語処理</p>
-          <p>よく使うプログラミング言語 : Python</p>
-          <p>言語処理学会学生会員・人工知能学会学生会員</p>
+      <div class="row px-1 pt-5 border-bottom">
+        <div class="col-12">
+          <h4>国内会議・その他</h4>
+        </div>
       </div>
-    </div>
-    
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>略歴</h3>
-      </div>
-    </div>
 
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <p>2020/04 - : &nbsp; 東京大学工学系研究科 システム創成学専攻 和泉研究室</p>
-        <p>2019/05 - 2020/03 : &nbsp; 東京大学工学部 システム創成学科 和泉研究室</p>
-        <p>2018/04 - 2020/03 : &nbsp; 東京大学工学部 システム創成学科 システムデザイン&マネジメント(SDM)コース</p>
-        <p>2016/04 - 2020/03 : &nbsp; 東京大学運動会ゴルフ部</p>
-        <p>2016/04 - 2018/03 : &nbsp; 東京大学 教養学部 前期課程理科二類</p>
-        <p>2015/04 - 2016/03 : &nbsp; 慶應義塾大学 理工学部 管理工学科</p>
-        <p>2009/04 - 2015/03 : &nbsp; 筑波大学附属駒場中・高等学校</p>
-        <p>1996/09 :  &nbsp; 東京生まれ</p>
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <ol>
+            <li>
+              <strong>鈴木雅弘</strong>, 坂地泰紀, 平野正徳, 和泉潔<br>
+              "金融文書を用いた事前学習言語モデルの構築と検証", <br>
+              人工知能学会第27回金融情報学研究会(SIG-FIN), オンライン, 2021/10/09(予定).<br>
+              <a href="https://sigfin.org/027-02/">sigfin.org/027-02/</a>
+            </li>
+            <li>
+              田口怜, 渡邊光, 平野正徳, <strong>鈴木雅弘</strong>, 坂地泰紀, 和泉潔, 平松賢士<br>
+              "金融テキストから生成した極性指標を用いた市場の因果性分析", <br>
+              人工知能学会第27回金融情報学研究会(SIG-FIN), オンライン, 2021/10/09(予定).<br>
+              <a href="https://sigfin.org/027-07/">sigfin.org/027-07/</a>
+            </li>
+            <li>
+              <strong>鈴木雅弘</strong>, 坂地泰紀, 平野正徳, 和泉潔<br>
+              "金融ドメインにおける事前学習BERTモデルの性能検証", <br>
+              第18回テキストアナリティクス・シンポジウム, 電子情報通信学会技術研究報告, Vol.12, No.178, NLC2021-12, pp. 26-29, オンライン, 2021/09/16.<br>
+            </li>
+            <li>
+              <strong>鈴木雅弘</strong>, 坂地泰紀, 平野正徳, 和泉潔<br>
+              "金融ドメインの事前学習BERTモデルの構築に向けて", <br>
+              NLP若手の会第16回シンポジウム(YANS 2021), オンライン, 2021/08/31.<br>
+            </li>
+            <li>
+              <strong>鈴木雅弘</strong>, 坂地泰紀, 和泉潔, 松島裕康, 石川康,<br>
+              "テキストマイニングを用いたアナリストレポートからの純利益予測", <br>
+              2020年度人工知能学会全国大会(第34回), <s>熊本</s> オンライン, 2020/06/09.<br>
+              <a href="https://doi.org/10.11517/pjsai.JSAI2020.0_1D3GS1301">doi.org/10.11517/pjsai.JSAI2020.0_1D3GS1301</a>
+            </li>
+            <li>
+              <strong>鈴木雅弘</strong>, 堅木聖也, 坂地泰紀, 和泉潔, 石川康,<br>
+              "テキストマイニングによるアナリストレポートを用いた株価動向予測", <br>
+              言語処理学会第26回年次大会(NLP2020), pp. 307-310, <s>水戸</s> オンライン, 2020/03/17.<Br>
+                <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf">www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf</a>
+            </li>
+          </ol>
+        </div>
       </div>
-    </div>
 
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>公開リソース</h3>
+      <div class="row pt-5 border-bottom" id="awards">
+        <div class="col-12">
+          <h3>奨学金・受賞</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <ul>
-          <li>
-            BERT・ELECTRAの日本語事前学習プログラム (<a href="https://github.com/retarfi/language-pretraining", target=_blank>github.com/retarfi/language-pretraining</a>)<br>
-            日本語Wikipediaや金融ドメインをコーパスに用いて訓練した、BERTやELECTRAの事前学習モデル。それぞれWikipediaモデルと金融モデルが自然言語処理ライブラリのTransformersにて利用可能 (<a href="https://huggingface.co/izumi-lab", target=_blank>huggingface.co/izumi-lab</a>)。
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>審査付学術雑誌論文</h3>
-      </div>
-    </div>
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <h6><strong>奨学金</strong></h6>
+          <ul>
+            <li>2020/04 : &nbsp; トヨタ・ドワンゴ高度人工知能人材奨学金 (1年: 120万円)</li>
+            <li>2020/04 : &nbsp; JEES・ソフトバンクAI人材育成奨学金 (1年: 100万円)</li>
+          </ul>
 
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <ul>
-          <li>
-            <strong>Masahiro Suzuki</strong>, Hiroki Sakaji, Kiyoshi, Izumi, Hiroyasu Matsushima, Yasushi Ishikawa, <br>
-            "Forecasting Net Income Estimate and Stock Price Using Text Mining from Economic Reports", <br>
-            <i>Information</i> (ISSN 2078-2489), MDPI, <strong>2020</strong>, 11, 292, 2020.<br>
-            <a href="https://doi.org/10.3390/info11060292" target=_blank>doi.org/10.3390/info1160292</a><br>
-            (Cover Storyに選出)
-          </li>
-        </ul>
+          <h6><strong>受賞</strong></h6>
+          <ul>
+            <li>
+              Best Paper Award in the 2nd International Workshop on Cross-disciplinary Data Exchange and Collaboration (CDEC) <a href="http://www.panda.sys.t.u-tokyo.ac.jp/CDEC/2019/#">CDEC HP</a><br>
+              <a href="http://www.t.u-tokyo.ac.jp/foe/topics/setnws_201912131024322707726366.html">東京大学工学部紹介記事</a> / <a href="http://www.sys.t.u-tokyo.ac.jp/2019/11/%E3%80%90%E5%8F%97%E8%B3%9E%EF%BC%8F%E8%A1%A8%E5%BD%B0%E7%AD%89%E3%80%91%E5%92%8C%E6%B3%89%E7%A0%94%E7%A9%B6%E5%AE%A4%E3%81%AE%E9%88%B4%E6%9C%A8-%E9%9B%85%E5%BC%98b4%E3%81%8Cthe-2nd-international-wo/">東京大学大学院工学系研究科システム創成学専攻紹介記事</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>審査付国際会議</h3>
+      
+      <div class="row pt-5 border-bottom" id="others">
+        <div class="col-12">
+          <h3>その他</h3>
+        </div>
       </div>
-    </div>
+      <div class="row px-3 pt-3 pb-1 border-bottom">
+        <div class="col-xs-12">
+          <ol>
+            <li>
+              <a href="http://www.golferweb.jp/kanri/stud/result/1-2019-2.pdf">2019年度関東学生ゴルフ連盟男子 6月月例会</a>: 48-45=93(72T)
+            </li>
+            <li>
+              東京大学運動会ゴルフ部ホームページ 2018年度制作
+            </li>
+          </ol>
+        </div>
+      </div>
 
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <ul>
-          <li>
-            Rei Taguchi, Hikaru Watanabe, Masanori Hirano, <strong>Masahiro Suzuki</strong>, Hiroki Sakaji, Kiyoshi Izumi, and Kenji Hiramatsu, <br>
-            "Market Trend Analysis Using Polarity Index Generated from Analyst Reports," <br>
-            The 4th International Workshop on Cross-disciplinary Data Exchange and Collaboration (CDEC) <br>
-            in IEEE BigData 2021, Online, December, 2021.
-	        </li>
-          <li>
-            <strong>Masahiro Suzuki</strong>, Toshiya Katagi, Hiroki Sakaji, Kiyoshi Izumi, Yasushi Ishikawa, <br>
-            "Stock Price Analysis Using Combination of Analyst Reports and Several Documents," <br>
-            The 2nd International Workshop on Cross-disciplinary Data Exchange and Collaboration (CDEC) <br>
-            in 19th IEEE International Conference on Data Mining Workshops (ICDMW2019), pp.30-36, Beijing, China, November, 2019.<br>
-            (Best Paper Award, 47.4% Acceptance Rate) <br>
-            <a href='https://ieeexplore.ieee.org/document/8955526'>ieeexplore.ieee.org/document/8955526</a>
-	        </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>国内会議・その他</h3>
-      </div>
-    </div>
-
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <ol>
-          <li>
-            <strong>鈴木雅弘</strong>, 坂地泰紀, 平野正徳, 和泉潔<br>
-            "金融文書を用いた事前学習言語モデルの構築と検証", <br>
-            人工知能学会第27回金融情報学研究会(SIG-FIN), オンライン, 2021/10/09(予定).<br>
-            <a href="https://sigfin.org/027-02/">sigfin.org/027-02/</a>
-          </li>
-          <li>
-            田口怜, 渡邊光, 平野正徳, <strong>鈴木雅弘</strong>, 坂地泰紀, 和泉潔, 平松賢士<br>
-            "金融テキストから生成した極性指標を用いた市場の因果性分析", <br>
-            人工知能学会第27回金融情報学研究会(SIG-FIN), オンライン, 2021/10/09(予定).<br>
-            <a href="https://sigfin.org/027-07/">sigfin.org/027-07/</a>
-          </li>
-          <li>
-            <strong>鈴木雅弘</strong>, 坂地泰紀, 平野正徳, 和泉潔<br>
-            "金融ドメインにおける事前学習BERTモデルの性能検証", <br>
-            第18回テキストアナリティクス・シンポジウム, 電子情報通信学会技術研究報告, Vol.12, No.178, NLC2021-12, pp. 26-29, オンライン, 2021/09/16.<br>
-          </li>
-          <li>
-            <strong>鈴木雅弘</strong>, 坂地泰紀, 平野正徳, 和泉潔<br>
-            "金融ドメインの事前学習BERTモデルの構築に向けて", <br>
-            NLP若手の会第16回シンポジウム(YANS 2021), オンライン, 2021/08/31.<br>
-          </li>
-          <li>
-            <strong>鈴木雅弘</strong>, 坂地泰紀, 和泉潔, 松島裕康, 石川康,<br>
-            "テキストマイニングを用いたアナリストレポートからの純利益予測", <br>
-            2020年度人工知能学会全国大会(第34回), <s>熊本</s> オンライン, 2020/06/09.<br>
-            <a href="https://doi.org/10.11517/pjsai.JSAI2020.0_1D3GS1301">doi.org/10.11517/pjsai.JSAI2020.0_1D3GS1301</a>
-          </li>
-          <li>
-            <strong>鈴木雅弘</strong>, 堅木聖也, 坂地泰紀, 和泉潔, 石川康,<br>
-            "テキストマイニングによるアナリストレポートを用いた株価動向予測", <br>
-            言語処理学会第26回年次大会(NLP2020), pp. 307-310, <s>水戸</s> オンライン, 2020/03/17.<Br>
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf">www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf</a>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>奨学金・受賞</h3>
-      </div>
-    </div>
-
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <h6><strong>奨学金</strong></h6>
-        <ul>
-          <li>2020/04 : &nbsp; トヨタ・ドワンゴ高度人工知能人材奨学金 (1年: 120万円)</li>
-          <li>2020/04 : &nbsp; JEES・ソフトバンクAI人材育成奨学金 (1年: 100万円)</li>
-        </ul>
-
-        <h6><strong>受賞</strong></h6>
-        <ul>
-          <li>
-            Best Paper Award in the 2nd International Workshop on Cross-disciplinary Data Exchange and Collaboration (CDEC) <a href="http://www.panda.sys.t.u-tokyo.ac.jp/CDEC/2019/#">CDEC HP</a><br>
-            <a href="http://www.t.u-tokyo.ac.jp/foe/topics/setnws_201912131024322707726366.html">東京大学工学部紹介記事</a> / <a href="http://www.sys.t.u-tokyo.ac.jp/2019/11/%E3%80%90%E5%8F%97%E8%B3%9E%EF%BC%8F%E8%A1%A8%E5%BD%B0%E7%AD%89%E3%80%91%E5%92%8C%E6%B3%89%E7%A0%94%E7%A9%B6%E5%AE%A4%E3%81%AE%E9%88%B4%E6%9C%A8-%E9%9B%85%E5%BC%98b4%E3%81%8Cthe-2nd-international-wo/">東京大学大学院工学系研究科システム創成学専攻紹介記事</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>その他</h3>
-      </div>
-    </div>
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <ol>
-          <li>
-            東京大学運動会ゴルフ部ホームページ 2018年度制作
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="row pt-5 border-bottom">
-      <div class="col-12">
-        <h3>ゴルフ</h3>
-      </div>
-    </div>
-    <div class="row px-3 pt-3 pb-1 border-bottom">
-      <div class="col-xs-12">
-        <ul>
-          <li>
-            <a href="http://www.golferweb.jp/kanri/stud/result/1-2019-2.pdf">2019年度関東学生ゴルフ連盟男子 6月月例会</a>: 48-45=93(72T)
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="js/navbar.js"></script>
     </div>
   </body>
 </html>
