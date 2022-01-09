@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="本研究では、証券アナリストの見積もりと経済指標の因果性分析を実施する。これは証券アナリストレポートのテキスト情報を自然言語処理を使用して極性指標を作成することで実現可能となる。本研究では、作成した極性指標に対し、各種経済指標を使用して因果関係の検定を行った。結果、極性指標が、物価、為替、国債、等の指標に対し、影響を与えていることが確認された。これにより、証券アナリストの見積もりが市場に影響を与えている可能性が強く支持された。" />
+    <meta name="robots" content="index, follow">
+    <meta name="citation_publisher" content="人工知能学 金融情報学研究会 (SIG-FIN)" />
+    <meta name="citation_author" content="田口 怜" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="渡邊 光" />
+    <meta name="citation_author_institution" content="東京大学 工学部" />
+    <meta name="citation_author" content="平野 正徳" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="鈴木 雅弘" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="坂地 泰紀" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="和泉 潔" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="平松 賢士" />
+    <meta name="citation_author_institution" content="株式会社アイフィスジャパン" />
+    <meta name="citation_title" content="アナリストレポートから生成した極性指標を用いた市場動向分析" />
+    <meta name="citation_publication_date" content="2021" />
+    <meta name="citation_online_date" content="2021/10/09" />
+    <meta name="citation_firstpage" content="36" />
+    <meta name="citation_lastpage" content="43" />
+    <meta name="citation_fulltext_world_readable" content="" />
+    <meta name="citation_pdf_url" content="https://sigfin.org/?plugin=attach&refer=027-02&openfile=02_SIG-FIN-27.pdf" />
+    <meta name="citation_language" content="ja" />
+    <meta name="citation_keywords" content="証券アナリストレポート" />
+    <meta name="citation_keywords" content="金融テキストマイニング" />
+    <meta name="citation_keywords" content="BERT" />
+    <meta name="citation_keywords" content="VARモデル" />
+    <meta name="citation_keywords" content="Securities Analyst Report" />
+    <meta name="citation_keywords" content="Financial Text Mining" />
+    <meta name="citation_keywords" content="VAR Model" />
+    <meta name="citation_conference_title" content="人工知能学会第27回金融情報学研究会 (SIG-FIN)" />
+    <meta property="og:title" content="アナリストレポートから生成した極性指標を用いた市場動向分析" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://msuzuki.me/img/msuzuki.jpg" />
+    <meta property="og:url" content="http://msuzuki.me/paper/sigfin-027-07.html" />
+    <meta property="og:site_name" content="鈴木雅弘">
+    <meta property="og:description" content="本研究では、証券アナリストの見積もりと経済指標の因果性分析を実施する。これは証券アナリストレポートのテキスト情報を自然言語処理を使用して極性指標を作成することで実現可能となる。本研究では、作成した極性指標に対し、各種経済指標を使用して因果関係の検定を行った。結果、極性指標が、物価、為替、国債、等の指標に対し、影響を与えていることが確認された。これにより、証券アナリストの見積もりが市場に影響を与えている可能性が強く支持された。" />
+    <title>アナリストレポートから生成した極性指標を用いた市場動向分析</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min_flatly.css" />
+    <script>
+      var shiftWindow = function() { scrollBy(0, -50) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+  </head>
+
+  <body style="padding-top: 70px" onload="load()">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/">Home</a>
+    </nav>
+
+    <div class="container">
+      <div class="row pt-5 border-bottom" id="self-introduction">
+        <div class="col-12">
+          <h3>アナリストレポートから生成した極性指標を用いた市場動向分析</h3>
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>著者</h5><br>
+          田口怜, 渡邊光, 平野正徳, 鈴木雅弘, 坂地泰紀, 和泉潔(東京大学), 平松賢士(アイフィスジャパン)
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>概要</h5><br>
+          本研究では、証券アナリストの見積もりと経済指標の因果性分析を実施する。これは証券アナリストレポートのテキスト情報を自然言語処理を使用して極性指標を作成することで実現可能となる。本研究では、作成した極性指標に対し、各種経済指標を使用して因果関係の検定を行った。結果、極性指標が、物価、為替、国債、等の指標に対し、影響を与えていることが確認された。これにより、証券アナリストの見積もりが市場に影響を与えている可能性が強く支持された。
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>論文</h5><br>
+          <ul>
+            <li>
+              <a href="https://sigfin.org/?plugin=attach&refer=027-07&openfile=07_SIG-FIN-27.pdf">SIG-FIN-027-07.pdf</a>
+            </li>
+            <li>
+              <a href="https://sigfin.org/027-07/">sigfin.org/027-07/</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>Bibtex</h5><br>
+          <pre>
+            <code>
+@inproceedings{taguchi2021sigfin,
+  title = {アナリストレポートから生成した極性指標を用いた市場動向分析}
+  author = {田口 怜, 渡邊 光, 平野 正徳, 鈴木 雅弘, 坂地 泰紀, 和泉 潔, 平松 賢士},
+  month = {oct},
+  year = {2021},
+  booktitle = {人工知能学会第27回金融情報学研究会(SIG-FIN)}
+}
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>会議情報</h5><br>
+          <ul>
+            <li>会議名: 人工知能学会第27回金融情報学研究会 (SIG-FIN)</li>
+            <li>開催日: 2020/10/09</li>
+            <li>開催地: オンライン</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="js/navbar.js"></script>
+    </div>
+  </body>
+</html>
