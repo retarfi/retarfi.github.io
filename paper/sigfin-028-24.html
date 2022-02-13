@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="本研究では決算短信や有価証券報告書を用い、言語モデルのBERTとELECTRAについて、事前学習や追加で事前学習(追加事前学習)を行いモデルを構築する。構築したモデルについて、金融ドメインのタスクによって汎用コーパスを用いたモデルとの性能を比較する。その際、ファインチューニングを行う層の数などパラメーターによる性能についても比較を行う。構築した一部のモデルについては一般に公開する。" />
+    <meta name="robots" content="index, follow">
+    <meta name="citation_publisher" content="人工知能学 金融情報学研究会 (SIG-FIN)" />
+    <meta name="citation_author" content="鈴木 雅弘" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="坂地 泰紀" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="平野 正徳" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_author" content="和泉 潔" />
+    <meta name="citation_author_institution" content="東京大学 大学院工学系研究科" />
+    <meta name="citation_title" content="事前学習と追加事前学習による金融言語モデルの構築と検証" />
+    <meta name="citation_publication_date" content="2022" />
+    <meta name="citation_online_date" content="2022/03/12" />
+    <!-- <meta name="citation_firstpage" content="" /> -->
+    <!-- <meta name="citation_lastpage" content="" /> -->
+    <meta name="citation_fulltext_world_readable" content="" />
+    <meta name="citation_abstract_html_url" content="https://msuzuki.me/paper/sigfin-028-24.html">
+    <!-- <meta name="citation_pdf_url" content="https://msuzuki.me/paper/sigfin-028-24.pdf" /> -->
+    <meta name="citation_language" content="ja" />
+    <meta name="citation_keywords" content="事前学習" />
+    <meta name="citation_keywords" content="自然言語処理" />
+    <meta name="citation_keywords" content="BERT" />
+    <meta name="citation_keywords" content="Pre-training" />
+    <meta name="citation_keywords" content="Additional Pre-training" />
+    <meta name="citation_keywords" content="Natural Language Processing" />
+    <meta name="citation_conference_title" content="人工知能学会第28回金融情報学研究会(SIG-FIN)" />
+    <meta property="og:title" content="事前学習と追加事前学習による金融言語モデルの構築と検証" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://msuzuki.me/img/msuzuki.jpg" />
+    <meta property="og:url" content="http://msuzuki.me/paper/sigfin-028-24.html" />
+    <meta property="og:site_name" content="鈴木雅弘">
+    <meta property="og:description" content="本研究では決算短信や有価証券報告書を用い、言語モデルのBERTとELECTRAについて、事前学習や追加で事前学習(追加事前学習)を行いモデルを構築する。構築したモデルについて、金融ドメインのタスクによって汎用コーパスを用いたモデルとの性能を比較する。その際、ファインチューニングを行う層の数などパラメーターによる性能についても比較を行う。構築した一部のモデルについては一般に公開する。" />
+    <title>事前学習と追加事前学習による金融言語モデルの構築と検証</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min_flatly.css" />
+    <script>
+      var shiftWindow = function() { scrollBy(0, -50) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+  </head>
+
+  <body style="padding-top: 70px" onload="load()">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/">Home</a>
+    </nav>
+
+    <div class="container">
+      <div class="row pt-5 border-bottom" id="self-introduction">
+        <div class="col-12">
+          <h3>金融文書を用いた事前学習言語モデルの構築と検証</h3>
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>著者</h5><br>
+          鈴木雅弘, 坂地泰紀, 平野正徳, 和泉潔(東京大学)
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>概要</h5><br>
+          本研究では決算短信や有価証券報告書を用い、言語モデルのBERTとELECTRAについて、事前学習や追加で事前学習(追加事前学習)を行いモデルを構築する。構築したモデルについて、金融ドメインのタスクによって汎用コーパスを用いたモデルとの性能を比較する。その際、ファインチューニングを行う層の数などパラメーターによる性能についても比較を行う。構築した一部のモデルについては一般に公開する。
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>論文</h5><br>
+          <ul>
+            <!-- <li>
+              <a href="/paper/sigfin-028-24.pdf">SIG-FIN-27-02.pdf</a>
+            </li> -->
+            <li>
+              <a href="https://sigfin.org/028-24/">sigfin.org/028-24/</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>Bibtex</h5>
+          <pre><code>@inproceedings{suzuki2022japanesefinbertelectra,
+  title = {事前学習と追加事前学習による金融言語モデルの構築と検証},
+  author = {鈴木 雅弘 and 坂地 泰紀 and 平野 正徳 and 和泉 潔},
+  month = {mar},
+  year = {2022},
+  booktitle = {人工知能学会第28回金融情報学研究会(SIG-FIN)}
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>会議情報</h5><br>
+          <ul>
+            <li>会議名: 人工知能学会第28回金融情報学研究会 (SIG-FIN)</li>
+            <li>開催日: 2022/03/12</li>
+            <li>開催地: 東京大学(文京区)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="/js/navbar.js"></script>
+    </div>
+  </body>
+</html>
