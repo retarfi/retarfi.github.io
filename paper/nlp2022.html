@@ -2,27 +2,25 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <meta name="citation_title" content="テキストマイニングによるアナリストレポートを用いた株価動向予測" />
+    <meta name="citation_title" content="金融文書を用いた追加事前学習言語モデルの構築と検証" />
     <meta name="citation_author" content="鈴木 雅弘" />
-    <meta name="citation_author" content="堅木 聖也" />
     <meta name="citation_author" content="坂地 泰紀" />
     <meta name="citation_author" content="和泉 潔" />
     <meta name="citation_author" content="石川 康" />
-    <meta name="citation_publication_date" content="2020/03/17" />
-    <meta name="citation_online_date" content="2020/03/17" />
-    <meta name="citation_conference_title" content="言語処理学会 第26回年次大会(NLP2020)" />
+    <meta name="citation_publication_date" content="2022/03/14" />
+    <meta name="citation_online_date" content="2020/03/14" />
+    <meta name="citation_conference_title" content="言語処理学会 第28回年次大会(NLP2022)" />
     <meta name="citation_firstpage" content="307" />
     <meta name="citation_lastpage" content="310" />
-    <meta name="citation_abstract_html_url" content="https://msuzuki.me/paper/nlp2020-b1-3.html">
-    <meta name="citation_pdf_url" content="https://msuzuki.me/paper/nlp2020-b1-3.pdf" />
+    <meta name="citation_abstract_html_url" content="https://msuzuki.me/paper/nlp2022.html">
+    <meta name="citation_pdf_url" content="https://msuzuki.me/paper/nlp2022.pdf" />
     <meta name="citation_language" content="ja" />
-    <meta property="og:title" content="テキストマイニングによるアナリストレポートを用いた株価動向予測" />
+    <meta property="og:title" content="金融文書を用いた追加事前学習言語モデルの構築と検証" />
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://msuzuki.me/img/msuzuki.jpg" />
-    <meta property="og:url" content="http://msuzuki.me/paper/nlp2020-b1-3.html" />
+    <meta property="og:url" content="http://msuzuki.me/paper/nlp2022.html" />
     <meta property="og:site_name" content="鈴木雅弘">
-    <meta property="og:description" content="東京証券取引所の調査によると，近年の日本における個人投資家の数が増加している．" />
-    <title>テキストマイニングによるアナリストレポートを用いた株価動向予測</title>
+    <title>金融文書を用いた追加事前学習言語モデルの構築と検証</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min_flatly.css" />
     <script>
@@ -40,37 +38,44 @@
     <div class="container">
       <div class="row pt-5 border-bottom" id="self-introduction">
         <div class="col-12">
-          <h3>テキストマイニングによるアナリストレポートを用いた株価動向予測</h3>
+          <h3>金融文書を用いた追加事前学習言語モデルの構築と検証</h3>
         </div>
       </div>
 
       <div class="row px-1 pt-4">
         <div class="col-12">
           <h5>著者</h5><br>
-          鈴木雅弘, 堅木聖也, 坂地泰紀, 和泉潔 (東京大学), 石川康 (日興アセットマネジメント)
+          鈴木雅弘, 坂地泰紀, 和泉潔 (東京大学), 石川康 (日興アセットマネジメント)
         </div>
       </div>
 
       <div class="row px-1 pt-4">
+        <div class="col-12">
+          <h5>概要</h5><br>
+          本研究では，汎用言語コーパスを用いて事前学習を行ったBERTモデルに対し，金融コーパスを用いて追加で事前学習(追加事前学習)を行う方が有用であるか検証を行う．追加事前学習を行ったモデルを2つの金融テキストを用いたタスクに適用し，追加事前学習を行うことで，汎用言語コーパスによる事前学習モデルを上回る性能を持つことを示す．また，Tokenizerを構築する際のコーパスの比較を行った．追加事前学習モデルのTokenizerに用いるコーパスにおいて，汎用言語コーパスのみによるモデルと金融コーパスを用いたモデルの間に性能差は見られなかった．
+        </div>
+      </div>
+      
+      <!-- <div class="row px-1 pt-4">
         <div class="col-12">
           <h5>論文</h5><br>
           <ul>
             <li>
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf">www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf</a>
+              <a href="https://msuzuki.me/paper/nlp2020-b1-3.pdf">www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/B1-3.pdf</a>
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <div class="row px-1 pt-4">
         <div class="col-12">
           <h5>Bibtex</h5>
-          <pre><code>@inproceedings{suzuki2020nlp,
-  title = {テキストマイニングによるアナリストレポートを用いた株価動向予測},
-  author = {鈴木 雅弘 and 堅木 聖也 and 坂地 泰紀 and 和泉 潔 and 石川 康},
-  year = {2020},
-  booktitle = {言語処理学会第26回年次大会(NLP2020)},
-  pages={307-310}
+          <pre><code>@inproceedings{suzuki2022nlp,
+  title = {金融文書を用いた追加事前学習言語モデルの構築と検証},
+  author = {鈴木 雅弘 and 坂地 泰紀 and 和泉 潔 and 石川 康},
+  year = {2022},
+  booktitle = {言語処理学会第2８8回年次大会(NLP2022)},
+  pages={588-592}
 }</code></pre>
         </div>
       </div>
@@ -79,8 +84,8 @@
         <div class="col-12">
           <h5>会議情報</h5><br>
           <ul>
-            <li>会議名: 言語処理学会 第26回年次大会 (NLP2020)</li>
-            <li>開催日: 2020/03/17-19</li>
+            <li>会議名: 言語処理学会 第28回年次大会 (NLP2022)</li>
+            <li>開催日: 2022/03/14-18</li>
             <li>開催地: オンライン</li>
           </ul>
         </div>
